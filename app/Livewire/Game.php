@@ -72,7 +72,7 @@ class Game extends Component
 
         $this->gameStarted = true;
 
-        $this->players = $players;
+        $this->players = $shuffledPlayers;
 
         Cookie::queue('game_uuid', $this->gameUuid, 60 * 24);
     }
