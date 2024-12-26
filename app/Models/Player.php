@@ -21,6 +21,6 @@ class Player extends Model
 
     public function secretFriend(): HasOne
     {
-        return $this->hasOne(self::class, 'secret_friend_id');
+        return $this->hasOne(Player::class, 'secret_friend_id', 'id');
     }
 }
