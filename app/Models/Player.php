@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Player extends Model
 {
@@ -19,8 +19,8 @@ class Player extends Model
         ];
     }
 
-    public function secretFriend(): HasOne
+    public function secretFriend(): BelongsTo
     {
-        return $this->hasOne(Player::class, 'secret_friend_id', 'id');
+        return $this->belongsTo(Player::class, 'secret_friend_id', 'id');
     }
 }
