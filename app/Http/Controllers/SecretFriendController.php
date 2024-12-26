@@ -25,7 +25,7 @@ class SecretFriendController extends Controller
         ]);
 
         return view('secret-friend-show', [
-            'text' => $player->name, ' tu amigo secreto es '.$player->secretFriend->name,
+            'text' => $player->name.', tu amigo secreto es '.$player->secretFriend->name,
         ]);
     }
 }
